@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from api.views import analyze_tasks, suggest_tasks
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # Analyze tasks
+    path('api/tasks/analyze/', analyze_tasks, name="analyze"),
+
+    # Suggest tasks
+    path('api/tasks/suggest/', suggest_tasks, name="suggest"),
 ]

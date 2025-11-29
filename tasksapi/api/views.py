@@ -42,3 +42,7 @@ def analyze_tasks(request):
     scored_tasks.sort(key=lambda x: x['priority_score'], reverse=True)
 
     return Response(scored_tasks)
+@api_view(['GET'])
+def suggest_tasks(request):
+    tasks = Task.objects.all().values()
+    return Response(list(tasks))
