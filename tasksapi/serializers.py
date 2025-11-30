@@ -6,3 +6,5 @@ class TaskInputSerializer(serializers.Serializer):
     estimated_hours = serializers.FloatField()
     importance = serializers.IntegerField()
     dependencies = serializers.ListField()
+    feedback_helpful = serializers.BooleanField(required=False, allow_null=True)
+    

@@ -13,7 +13,8 @@ class Task(models.Model):
     dependencies = models.TextField(blank=True, null=True)
     priority_score = models.FloatField(blank=True, null=True)
     explanation = models.TextField(blank=True, null=True)
-    feedback_helpful = models.BooleanField(default=False)
+    feedback_helpful = models.BooleanField(null=True, blank=True)
+
 
 
     def __str__(self):

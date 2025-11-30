@@ -44,13 +44,28 @@ def analyze_tasks(request):
 
 
 @api_view(['POST'])
-def task_feedback(request):
-    data = request.data
-    for task_id, helpful in data.items():
+def submit_feedback (request):
+    task_id = request.data.get("task_id")
+    helpful = request.data.get("helpful")
+
+    try:
         task = Task.objects.get(id=task_id)
-        task.feedback_helpful = helpful  # Add BooleanField to Task model
-        task.save()
-    return Response({"status": "success"})
+    except Task.DoesNotExist:
+        return Response({"error": "Task not found"}, status=404)
+
+    # Save feedback
+    task.feedback_helpful = helpful
+
+    # Update priority score
+    if helpful:
+        task.priority_score += 5
+    else:
+        task.priority_score -= 2
+
+    task.save()
+
+    return Response({"message": "Feedback saved and score updated"}, status=200)
+
 
 
 

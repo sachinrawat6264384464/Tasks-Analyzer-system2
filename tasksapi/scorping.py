@@ -34,4 +34,8 @@ def calculate_priority_score(task):
     if len(task['dependencies']) > 0:
         explanation.append(f"Blocks {len(task['dependencies'])} tasks")
 
+    # -------------------------------
+    # NEW: Feedback influence
+    # -------------------------------
+
     return score, ", ".join(explanation)
