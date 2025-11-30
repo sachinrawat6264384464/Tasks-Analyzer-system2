@@ -25,5 +25,6 @@ urlpatterns = [
     path('api/tasks/analyze/', analyze_tasks, name="analyze"),
 
     # Suggest tasks
-    path('api/tasks/suggest/', suggest_tasks, name="suggest"),
+  path("api/tasks/data/", suggest_tasks,name="user-tasks"),
+
 ]

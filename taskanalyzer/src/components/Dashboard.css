@@ -1,0 +1,90 @@
+/* Dashboard.css */
+
+/* Container */
+
+
+/* Table */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.priority-high { background-color: #ffcccc; }
+.priority-medium { background-color: #fff0b3; }
+.priority-low { background-color: #ccffcc; }
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.dashboard-table th {
+  background-color: #f2f2f2;
+}
+
+/* Table Head */
+.dashboard-table th {
+  background-color: #4f46e5; /* nice purple-blue */
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table Cells */
+.dashboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect */
+.dashboard-table tbody tr:hover {
+  background-color: #f0f0f0;
+  transition: 0.3s;
+}
+
+/* Priority Colors */
+.priority-high {
+  background-color: #16a34a; /* green */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.priority-medium {
+  background-color: #eab308; /* yellow */
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.priority-low {
+  background-color: #dc2626; /* red */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-table th, .dashboard-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .dashboard-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-table th, .dashboard-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

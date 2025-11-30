@@ -1,0 +1,132 @@
+/* Main container */
+.home-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 80px 4rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 7rem;
+}
+
+/* Hover effect on large screens */
+@media (min-width: 768px) {
+  .home-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* Heading */
+.home-title {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.home-text {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Subtle accent bar under heading */
+.home-title-bar {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a5acd, #00bcd4);
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide animation for title bar */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+/* ------------------------- */
+/*        RESPONSIVE         */
+/* ------------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .home-container {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+
+  .home-text {
+    font-size: 16px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 600px) {
+  .home-container {
+    margin: 20px auto;
+    padding: 18px;
+  }
+
+  .home-title {
+    font-size: 24px;
+  }
+
+  .home-text {
+    font-size: 15px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .home-title {
+    font-size: 22px;
+  }
+
+  .home-text {
+    font-size: 14px;
+  }
+}
+
+/* TV and Extra Large Screens */
+@media (min-width: 1600px) {
+  .home-container {
+    max-width: 70%;
+    padding: 40px;
+  }
+
+  .home-title {
+    font-size: 40px;
+  }
+
+  .home-text {
+    font-size: 20px;
+  }
+}

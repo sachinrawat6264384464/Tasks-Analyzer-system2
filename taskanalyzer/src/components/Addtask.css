@@ -1,0 +1,84 @@
+/* AddTasks.css */
+
+.addtasks-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addtasks-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.addtasks-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.addtasks-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addtasks-container input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+   box-shadow: 0 4px 15px rgb(17, 18, 18);
+  transition: all 0.3s ease;
+}
+
+.addtasks-container input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255);
+}
+
+.addtasks-container button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg, #e24526, #eb760f);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.addtasks-container button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.addtasks-container h3 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .addtasks-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .addtasks-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .addtasks-container button {
+    font-size: 1rem;
+  }
+}
