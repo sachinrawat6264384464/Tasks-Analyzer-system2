@@ -7,4 +7,5 @@ class TaskInputSerializer(serializers.Serializer):
     importance = serializers.IntegerField()
     dependencies = serializers.ListField()
     feedback_helpful = serializers.BooleanField(required=False, allow_null=True)
-    
+def get_days_left(self, obj):
+        return obj.days_left

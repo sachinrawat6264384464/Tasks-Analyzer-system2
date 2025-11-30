@@ -1,6 +1,7 @@
 from datetime import date
 
 def calculate_priority_score(task):
+   
     # 1. Urgency
     days_left = (task['due_date'] - date.today()).days
     urgency_score = 10 - days_left

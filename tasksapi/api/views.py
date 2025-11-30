@@ -32,7 +32,8 @@ def analyze_tasks(request):
         scored_tasks.append({
             **task_data,
             "priority_score": score,
-            "explanation": explanation
+            "explanation": explanation,
+            
         })
 
     # Sort by score (desc)

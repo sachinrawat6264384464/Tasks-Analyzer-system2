@@ -2,7 +2,7 @@
 # models.py
 from django.db import models
 
-from django.contrib.auth.models import User
+
 
 class Task(models.Model):
   
@@ -14,7 +14,6 @@ class Task(models.Model):
     priority_score = models.FloatField(blank=True, null=True)
     explanation = models.TextField(blank=True, null=True)
     feedback_helpful = models.BooleanField(null=True, blank=True)
-
 
 
     def __str__(self):
